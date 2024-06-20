@@ -1,4 +1,15 @@
 #include "mbed.h"
+#include "vaccinationSystem.h"
+#include "config.h"
+
+int main() {
+    vaccinationSystem system(PIN_RFID_MOSI, PIN_RFID_MISO, PIN_RFID_SCLK, PIN_RFID_CS, PIN_RFID_RESET, BUTTON1);
+    system.run();
+}
+
+
+
+/*#include "mbed.h"
 #include "MFRC522.h"
 
 // Definición de los pines
@@ -56,7 +67,7 @@ int main() {
         }
         ThisThread::sleep_for(500ms); // Esperar 500 ms antes de volver a verificar
     }
-}
+}*/
 
 
 //=====[Libraries]=============================================================

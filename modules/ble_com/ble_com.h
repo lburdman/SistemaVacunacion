@@ -1,12 +1,12 @@
-/*! @file ble_com.h Header file for the Bluetooth Comunication module.
+/*! @file ble_com.h Header file for the Bluetooth Communication module.
  *
  * @note This module handles the Bluetooth user interface.
  */
 
-//=====[#include guards - begin]===============================================
-
 #ifndef _BLE_COM_H_
 #define _BLE_COM_H_
+
+#include "config.h"
 
 //=====[Declarations (prototypes) of public functions]=========================
 
@@ -22,6 +22,11 @@ void bleComInit();
  */
 void bleComUpdate();
 
-//=====[#include guards - end]=================================================
+/**
+ * @brief Sends a string through Bluetooth.
+ * 
+ * @param[in] s String to send.
+ */
+void bleComStringWrite(const char* s);
 
 #endif // _BLE_COM_H_
